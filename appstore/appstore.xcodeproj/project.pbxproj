@@ -12,6 +12,7 @@
 		3DC5901821059CB900E5B043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC5901621059CB900E5B043 /* Main.storyboard */; };
 		3DC5901A21059CBC00E5B043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DC5901921059CBC00E5B043 /* Assets.xcassets */; };
 		3DC5901D21059CBC00E5B043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DC5901B21059CBC00E5B043 /* LaunchScreen.storyboard */; };
+		3DC590252105A53000E5B043 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC590242105A53000E5B043 /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		3DC5901921059CBC00E5B043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DC5901C21059CBC00E5B043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DC5901E21059CBC00E5B043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DC590242105A53000E5B043 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		3DC590262105A56000E5B043 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +41,7 @@
 		3DC5900621059CB900E5B043 = {
 			isa = PBXGroup;
 			children = (
+				3DC590262105A56000E5B043 /* README.md */,
 				3DC5901121059CB900E5B043 /* appstore */,
 				3DC5901021059CB900E5B043 /* Products */,
 			);
@@ -56,6 +60,7 @@
 			children = (
 				3DC5901221059CB900E5B043 /* AppDelegate.swift */,
 				3DC5901421059CB900E5B043 /* ViewController.swift */,
+				3DC590242105A53000E5B043 /* CategoryCell.swift */,
 				3DC5901621059CB900E5B043 /* Main.storyboard */,
 				3DC5901921059CBC00E5B043 /* Assets.xcassets */,
 				3DC5901B21059CBC00E5B043 /* LaunchScreen.storyboard */,
@@ -137,6 +142,7 @@
 			files = (
 				3DC5901521059CB900E5B043 /* ViewController.swift in Sources */,
 				3DC5901321059CB900E5B043 /* AppDelegate.swift in Sources */,
+				3DC590252105A53000E5B043 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
