@@ -27,7 +27,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.backgroundColor = .blue
+        collectionView.backgroundColor = .white
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
