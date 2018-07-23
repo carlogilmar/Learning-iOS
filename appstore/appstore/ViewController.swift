@@ -8,20 +8,6 @@
 
 import UIKit
 
-/*
- 
- todos:
- 
- - Create the UICollectionViewController
- - Initialize controller in the AppDelegate
- - Make the numbreOfItemsInSection function returning 3
- - Complete the cellForItem function
- - Create a class CategoryCell which implement UICollectionViewCell and initialize
- - Complete the cellForItem function returning cellForItem
- - Register the category cell
- - Add sizeForItem function and implements UICollectionViewDelegateFlowLayout
- */
-
 class FeaturedAppsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let cellId = "cellId"
@@ -47,20 +33,4 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
     }
 }
 
-class CategoryCell: UICollectionViewCell {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-        print("Category cell initialize...")
-        print(frame.debugDescription)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("Init coder has not been implemented!!!!")
-    }
-    
-    func setupViews(){
-        backgroundColor = .red
-    }
-}
+
