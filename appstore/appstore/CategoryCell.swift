@@ -33,14 +33,14 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     }()
     
     func setupViews(){
-        backgroundColor = .black
+        backgroundColor = .white
         addSubview(appsCollectionView)
         
         appsCollectionView.dataSource = self
         appsCollectionView.delegate = self
         appsCollectionView.register(AppCell.self, forCellWithReuseIdentifier: cellId)
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-8-[v0]-8-|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView]))
     }
     
@@ -67,6 +67,6 @@ class AppCell: UICollectionViewCell {
         fatalError("Init has not been implemented")
     }
     func setupViews(){
-        backgroundColor = .red
+        backgroundColor = .black
     }
 }
