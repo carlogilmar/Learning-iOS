@@ -19,10 +19,10 @@ import UIKit
  - Create a class CategoryCell which implement UICollectionViewCell and initialize
  - Complete the cellForItem function returning cellForItem
  - Register the category cell
- 
+ - Add sizeForItem function and implements UICollectionViewDelegateFlowLayout
  */
 
-class FeaturedAppsController: UICollectionViewController {
+class FeaturedAppsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     private let cellId = "cellId"
     
@@ -40,6 +40,10 @@ class FeaturedAppsController: UICollectionViewController {
     // items in collection view
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 150)
     }
 }
 
