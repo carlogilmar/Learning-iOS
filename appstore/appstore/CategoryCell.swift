@@ -58,6 +58,13 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
 }
 
 class AppCell: UICollectionViewCell {
+    
+    let imageView: UIImageView = {
+        let iv = UIImageView()
+        iv.image = UIImage(named: "logo")
+        iv.contentMode = .scaleAspectFill
+        return iv
+    }()
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -67,6 +74,7 @@ class AppCell: UICollectionViewCell {
         fatalError("Init has not been implemented")
     }
     func setupViews(){
-        backgroundColor = .black
+        addSubview(imageView)
+        imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
     }
 }
