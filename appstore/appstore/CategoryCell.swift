@@ -63,8 +63,18 @@ class AppCell: UICollectionViewCell {
         let iv = UIImageView()
         iv.image = UIImage(named: "logo")
         iv.contentMode = .scaleAspectFill
+        iv.layer.cornerRadius = 16
+        iv.layer.masksToBounds = true
         return iv
     }()
+    
+    let nameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Blog de carlogilmar"
+        label.font = UIFont.systemFont(ofSize: 12)
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -75,6 +85,8 @@ class AppCell: UICollectionViewCell {
     }
     func setupViews(){
         addSubview(imageView)
-        imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.height)
+        addSubview(nameLabel)
+        imageView.frame = CGRect(x: 0, y: 0, width: frame.width-25, height: frame.height-25)
+        nameLabel.frame = CGRect(x: 0, y: frame.width+2, width: frame.width, height: 40)
     }
 }
