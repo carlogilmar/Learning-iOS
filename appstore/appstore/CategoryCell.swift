@@ -75,6 +75,22 @@ class AppCell: UICollectionViewCell {
         return label
     }()
     
+    let categoryLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Lifestyle"
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.textColor = .gray
+        return label
+    }()
+    
+    let priceLabel: UILabel = {
+        let label = UILabel()
+        label.text = "$99.99 MNX"
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.textColor = .gray
+        return label
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -86,7 +102,12 @@ class AppCell: UICollectionViewCell {
     func setupViews(){
         addSubview(imageView)
         addSubview(nameLabel)
-        imageView.frame = CGRect(x: 0, y: 0, width: frame.width-25, height: frame.height-25)
-        nameLabel.frame = CGRect(x: 0, y: frame.width+2, width: frame.width, height: 40)
+        addSubview(categoryLabel)
+        addSubview(priceLabel)
+        imageView.frame = CGRect(x: 0, y: 0, width: frame.width-35, height: frame.height-55)
+        nameLabel.frame = CGRect(x: 0, y: frame.width-35, width: frame.width, height: 35)
+        categoryLabel.frame = CGRect(x: 0, y: frame.width-15, width: frame.width, height: 25)
+        priceLabel.frame = CGRect(x: 0, y: frame.width, width: frame.width, height: 25)
+        
     }
 }
