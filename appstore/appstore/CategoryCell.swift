@@ -38,19 +38,29 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+   
+    let columnLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Blog del carlogilmar"
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
     
     func setupViews(){
         backgroundColor = .white
         addSubview(appsCollectionView)
         addSubview(dividerLineView)
+        addSubview(columnLabel)
         
         appsCollectionView.dataSource = self
         appsCollectionView.delegate = self
         appsCollectionView.register(AppCell.self, forCellWithReuseIdentifier: cellId)
         
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": columnLabel]))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": dividerLineView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[v0][v1(0.5)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView, "v1": dividerLineView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[v0]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[nameLabel(30)][v0][v1(0.5)]|", options: NSLayoutFormatOptions(), metrics: nil, views: ["v0": appsCollectionView, "v1": dividerLineView, "nameLabel": columnLabel]))
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -113,7 +123,7 @@ class AppCell: UICollectionViewCell {
         addSubview(nameLabel)
         addSubview(categoryLabel)
         addSubview(priceLabel)
-        imageView.frame = CGRect(x: 0, y: 0, width: frame.width-35, height: frame.height-55)
+        imageView.frame = CGRect(x: 0, y: 0, width: frame.width-35, height: frame.height-70)
         nameLabel.frame = CGRect(x: 0, y: frame.width-35, width: frame.width, height: 35)
         categoryLabel.frame = CGRect(x: 0, y: frame.width-15, width: frame.width, height: 25)
         priceLabel.frame = CGRect(x: 0, y: frame.width, width: frame.width, height: 25)
