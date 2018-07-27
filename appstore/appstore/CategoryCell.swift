@@ -93,7 +93,15 @@ class AppCell: UICollectionViewCell {
     
     var app: App?{
         didSet{
-            nameLabel.text = app?.name
+            if let name = app?.name {
+                nameLabel.text = name
+            }
+            categoryLabel.text = app?.category
+            if let price = app?.price {
+                priceLabel.text = "$\(price)"
+            } else {
+                priceLabel.text = "sin precio"
+            }
         }
     }
     let imageView: UIImageView = {
