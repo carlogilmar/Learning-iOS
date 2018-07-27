@@ -19,7 +19,7 @@ class AppCategory: NSObject {
         var apps = [App]() //App Array
         let frozenApp = App()
         frozenApp.name = "Disney Build It: Frozen"
-        frozenApp.imageName = "frozen"
+        frozenApp.imageName = "logo"
         frozenApp.category = "Entertaiment"
         frozenApp.price = NSNumber(value: 3.99)
         apps.append(frozenApp)
@@ -31,6 +31,7 @@ class AppCategory: NSObject {
         let telepatainApp = App()
         telepatainApp.name = "Telepatian"
         telepatainApp.category = "Games"
+        telepatainApp.imageName = "appstore"
         telepatainApp.price = NSNumber(value: 2.99)
         games.append(telepatainApp)
         bestNewGamesCstegory.apps = games

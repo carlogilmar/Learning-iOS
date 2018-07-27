@@ -102,6 +102,10 @@ class AppCell: UICollectionViewCell {
             } else {
                 priceLabel.text = "sin precio"
             }
+            
+            if let imageName = app?.imageName {
+                imageView.image = UIImage(named: imageName)
+            }
         }
     }
     let imageView: UIImageView = {
