@@ -13,6 +13,7 @@ class AppCategory: NSObject {
     var apps: [App]?
     
     static func sampleAppCategories() -> [AppCategory] {
+        
         let bestNewAppsCategory = AppCategory()
         bestNewAppsCategory.name = "Best New Apps!"
         var apps = [App]() //App Array
@@ -23,7 +24,18 @@ class AppCategory: NSObject {
         frozenApp.price = NSNumber(value: 3.99)
         apps.append(frozenApp)
         bestNewAppsCategory.apps = apps
-        return [bestNewAppsCategory]
+        
+        let bestNewGamesCstegory = AppCategory()
+        bestNewGamesCstegory.name = "Best New Games🌚"
+        var games = [App]()
+        let telepatainApp = App()
+        telepatainApp.name = "Telepatian"
+        telepatainApp.category = "Games"
+        telepatainApp.price = NSNumber(value: 2.99)
+        games.append(telepatainApp)
+        bestNewGamesCstegory.apps = games
+        
+        return [bestNewAppsCategory, bestNewGamesCstegory]
     }
 }
 
