@@ -10,6 +10,14 @@ import UIKit
 
 class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
+    var appCategory: AppCategory? {
+        didSet {
+            if let name = appCategory?.name {
+                columnLabel.text = name
+            }
+        }
+    }
+    
     let cellId = "cellId"
     
     override init(frame: CGRect) {
