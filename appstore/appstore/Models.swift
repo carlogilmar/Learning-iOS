@@ -12,6 +12,24 @@ class AppCategory: NSObject {
     var name: String?
     var apps: [App]?
     
+    static func fetchFeaturedApps() {
+        print("----> making a request")
+        //Implementing URLSession
+        let urlString = "https://api.letsbuildthatapp.com/appstore/featured"
+        guard let url = URL(string: urlString) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            }
+            
+            guard let data = data else { return }
+            print(data.description)
+            print("Hay datos !!!")
+            print(response)
+            }.resume()
+    }
+    
     static func sampleAppCategories() -> [AppCategory] {
         
         let bestNewAppsCategory = AppCategory()
