@@ -103,6 +103,7 @@ class StarterController: UIViewController {
     let textEdit: UITextView = {
         let field = UITextView()
         field.text = "98"
+        field.font = UIFont(name: (field.font?.fontName)!, size: 20)
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
     }()
@@ -139,7 +140,7 @@ class StarterController: UIViewController {
         textEdit.centerXAnchor.constraint(equalTo: view1.centerXAnchor).isActive = true
         textEdit.bottomAnchor.constraint(equalTo: view1.bottomAnchor).isActive = true
         textEdit.widthAnchor.constraint(equalTo: view1.widthAnchor, multiplier: 0.5).isActive = true
-        textEdit.heightAnchor.constraint(equalTo: view1.heightAnchor, multiplier: 0.40).isActive = true
+        textEdit.heightAnchor.constraint(equalTo: view1.heightAnchor, multiplier: 0.60).isActive = true
 
 //        label1.centerXAnchor.constraint(equalTo: view1.centerXAnchor).isActive = true
 //        label1.bottomAnchor.constraint(equalTo: view1.bottomAnchor).isActive = true
