@@ -23,7 +23,7 @@ class AppCategory: NSObject {
     static func fetchFeaturedApps() {
         print("----> making a request")
        
-        let jsonUrlString = "https://api.letsbuildthatapp.com/jsondecodable/courses_missing_fields"
+        let jsonUrlString = "https://api.letsbuildthatapp.com/appstore/featured"
         guard let url = URL(string: jsonUrlString) else { return }
         
                 print("a- >>>>>>>>>>>>")
@@ -31,8 +31,8 @@ class AppCategory: NSObject {
             guard let data = data else { return }
             do {
                 print(">>>>>>>>>>>>")
-                let courses = try JSONDecoder().decode([Course].self, from: data)
-                print(courses)
+                //let courses = try JSONDecoder().decode([App].self, from: data)
+                print(data)
                 print(">>>>>>>>>>>>")
             } catch let jsonErr {
                 print("Error serializing json:", jsonErr)
@@ -76,3 +76,5 @@ class App: NSObject{
     var imageName: String?
     var price: NSNumber?
 }
+
+
