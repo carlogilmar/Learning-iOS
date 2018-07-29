@@ -23,8 +23,8 @@ class StarterController: UIViewController {
     let label1: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.text = "Hola"
-        label.textColor = .red
+        label.text = "200"
+        label.textColor = .white
         label.font = UIFont(name: label.font.fontName, size: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -34,7 +34,9 @@ class StarterController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.text = "Hola"
+        label.text = "degrees Fahrenheit"
+        label.textColor = .white
+        label.font = UIFont(name: label.font.fontName, size: 20)
         return label
     }()
     
@@ -42,7 +44,9 @@ class StarterController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.text = "Hola"
+        label.text = "is really"
+        label.textColor = .white
+        label.font = UIFont(name: label.font.fontName, size: 20)
         return label
     }()
     
@@ -50,7 +54,9 @@ class StarterController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.text = "Hola"
+        label.text = "100"
+        label.textColor = .white
+        label.font = UIFont(name: label.font.fontName, size: 20)
         return label
     }()
     
@@ -58,7 +64,9 @@ class StarterController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.text = "Hola"
+        label.text = "degree Celsius"
+        label.textColor = .white
+        label.font = UIFont(name: label.font.fontName, size: 20)
         return label
     }()
     
@@ -82,7 +90,7 @@ class StarterController: UIViewController {
     }()
     let view4: UIView = {
         let view = UIView()
-        view.backgroundColor = .yellow
+        view.backgroundColor = .purple
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -98,12 +106,20 @@ class StarterController: UIViewController {
         super.viewDidLoad()
         view.accessibilityScroll(.down)
         view.backgroundColor = .white
+        
         view.addSubview(scrollView)
+        
         scrollView.addSubview(view1)
         scrollView.addSubview(view2)
         scrollView.addSubview(view3)
         scrollView.addSubview(view4)
         scrollView.addSubview(view5)
+        scrollView.addSubview(label1)
+        scrollView.addSubview(label2)
+        scrollView.addSubview(label3)
+        scrollView.addSubview(label4)
+        scrollView.addSubview(label5)
+        
         setLabelAnchors()
     }
     
@@ -112,22 +128,47 @@ class StarterController: UIViewController {
         view1.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
         view1.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 1).isActive = true
         view1.heightAnchor.constraint(equalTo: scrollView.heightAnchor, multiplier: 0.10).isActive = true
-        
+
+        label1.centerXAnchor.constraint(equalTo: view1.centerXAnchor).isActive = true
+        label1.bottomAnchor.constraint(equalTo: view1.bottomAnchor).isActive = true
+        label1.widthAnchor.constraint(equalTo: view1.widthAnchor, multiplier: 0.9).isActive = true
+        label1.heightAnchor.constraint(equalTo: view1.heightAnchor, multiplier: 0.40).isActive = true
+
         view2.topAnchor.constraint(equalTo: view1.bottomAnchor).isActive = true
         view2.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
         view2.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.10).isActive = true
  
+        label2.centerXAnchor.constraint(equalTo: view2.centerXAnchor).isActive = true
+        label2.bottomAnchor.constraint(equalTo: view2.bottomAnchor).isActive = true
+        label2.widthAnchor.constraint(equalTo: view2.widthAnchor, multiplier: 0.9).isActive = true
+        label2.heightAnchor.constraint(equalTo: view2.heightAnchor, multiplier: 0.40).isActive = true
+        
         view3.topAnchor.constraint(equalTo: view2.bottomAnchor).isActive = true
         view3.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
         view3.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.10).isActive = true
         
+        label3.centerXAnchor.constraint(equalTo: view3.centerXAnchor).isActive = true
+        label3.bottomAnchor.constraint(equalTo: view3.bottomAnchor).isActive = true
+        label3.widthAnchor.constraint(equalTo: view3.widthAnchor, multiplier: 0.9).isActive = true
+        label3.heightAnchor.constraint(equalTo: view3.heightAnchor, multiplier: 0.40).isActive = true
+        
         view4.topAnchor.constraint(equalTo: view3.bottomAnchor).isActive = true
         view4.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
         view4.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.10).isActive = true
+       
+        label4.centerXAnchor.constraint(equalTo: view4.centerXAnchor).isActive = true
+        label4.bottomAnchor.constraint(equalTo: view4.bottomAnchor).isActive = true
+        label4.widthAnchor.constraint(equalTo: view4.widthAnchor, multiplier: 0.9).isActive = true
+        label4.heightAnchor.constraint(equalTo: view4.heightAnchor, multiplier: 0.40).isActive = true
         
         view5.topAnchor.constraint(equalTo: view4.bottomAnchor).isActive = true
         view5.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
         view5.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.10).isActive = true
+        
+        label5.centerXAnchor.constraint(equalTo: view5.centerXAnchor).isActive = true
+        label5.bottomAnchor.constraint(equalTo: view5.bottomAnchor).isActive = true
+        label5.widthAnchor.constraint(equalTo: view5.widthAnchor, multiplier: 0.9).isActive = true
+        label5.heightAnchor.constraint(equalTo: view5.heightAnchor, multiplier: 0.40).isActive = true
     }
 
 }
