@@ -100,6 +100,12 @@ class StarterController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    let textEdit: UITextView = {
+        let field = UITextView()
+        field.text = "98"
+        field.translatesAutoresizingMaskIntoConstraints = false
+        return field
+    }()
     
     
     override func viewDidLoad() {
@@ -114,7 +120,8 @@ class StarterController: UIViewController {
         scrollView.addSubview(view3)
         scrollView.addSubview(view4)
         scrollView.addSubview(view5)
-        scrollView.addSubview(label1)
+        scrollView.addSubview(textEdit)
+        //scrollView.addSubview(label1)
         scrollView.addSubview(label2)
         scrollView.addSubview(label3)
         scrollView.addSubview(label4)
@@ -129,10 +136,15 @@ class StarterController: UIViewController {
         view1.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 1).isActive = true
         view1.heightAnchor.constraint(equalTo: scrollView.heightAnchor, multiplier: 0.10).isActive = true
 
-        label1.centerXAnchor.constraint(equalTo: view1.centerXAnchor).isActive = true
-        label1.bottomAnchor.constraint(equalTo: view1.bottomAnchor).isActive = true
-        label1.widthAnchor.constraint(equalTo: view1.widthAnchor, multiplier: 0.9).isActive = true
-        label1.heightAnchor.constraint(equalTo: view1.heightAnchor, multiplier: 0.40).isActive = true
+        textEdit.centerXAnchor.constraint(equalTo: view1.centerXAnchor).isActive = true
+        textEdit.bottomAnchor.constraint(equalTo: view1.bottomAnchor).isActive = true
+        textEdit.widthAnchor.constraint(equalTo: view1.widthAnchor, multiplier: 0.5).isActive = true
+        textEdit.heightAnchor.constraint(equalTo: view1.heightAnchor, multiplier: 0.40).isActive = true
+
+//        label1.centerXAnchor.constraint(equalTo: view1.centerXAnchor).isActive = true
+//        label1.bottomAnchor.constraint(equalTo: view1.bottomAnchor).isActive = true
+//        label1.widthAnchor.constraint(equalTo: view1.widthAnchor, multiplier: 0.9).isActive = true
+//        label1.heightAnchor.constraint(equalTo: view1.heightAnchor, multiplier: 0.40).isActive = true
 
         view2.topAnchor.constraint(equalTo: view1.bottomAnchor).isActive = true
         view2.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
