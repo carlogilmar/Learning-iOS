@@ -8,26 +8,37 @@
 
 import UIKit
 
+struct Course: Decodable {
+    let id: Int?
+    let name: String?
+    let link: String?
+    let imageUrl: String?
+}
+
+
 class AppCategory: NSObject {
     var name: String?
     var apps: [App]?
     
     static func fetchFeaturedApps() {
         print("----> making a request")
-        //Implementing URLSession
-        let urlString = "https://api.letsbuildthatapp.com/appstore/featured"
-        guard let url = URL(string: urlString) else { return }
+       
+        let jsonUrlString = "https://api.letsbuildthatapp.com/jsondecodable/courses_missing_fields"
+        guard let url = URL(string: jsonUrlString) else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if error != nil {
-                print(error!.localizedDescription)
-            }
-            
+                print("a- >>>>>>>>>>>>")
+        URLSession.shared.dataTask(with: url) { (data, response, err) in
             guard let data = data else { return }
-            print(data.description)
-            print("Hay datos !!!")
-            print(response)
-            }.resume()
+            do {
+                print(">>>>>>>>>>>>")
+                let courses = try JSONDecoder().decode([Course].self, from: data)
+                print(courses)
+                print(">>>>>>>>>>>>")
+            } catch let jsonErr {
+                print("Error serializing json:", jsonErr)
+            }
+        }.resume()
+                print("b- >>>>>>>>>>>>")
     }
     
     static func sampleAppCategories() -> [AppCategory] {
