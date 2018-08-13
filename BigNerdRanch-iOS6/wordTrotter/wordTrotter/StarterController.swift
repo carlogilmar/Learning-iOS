@@ -100,6 +100,14 @@ class StarterController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    let view6: UIView = {
+        let view = UIView()
+        view.backgroundColor = .cyan
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     let textEdit: UITextView = {
         let field = UITextView()
         field.text = "98"
@@ -107,7 +115,12 @@ class StarterController: UIViewController {
         field.translatesAutoresizingMaskIntoConstraints = false
         return field
     }()
-    
+  
+    let button: UIButton = {
+        let button = UIButton()
+        button.setTitle("Calcular perro!!!", for: .normal)
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -127,6 +140,7 @@ class StarterController: UIViewController {
         scrollView.addSubview(label3)
         scrollView.addSubview(label4)
         scrollView.addSubview(label5)
+        scrollView.addSubview(button)
         
         setLabelAnchors()
     }
@@ -182,6 +196,11 @@ class StarterController: UIViewController {
         label5.bottomAnchor.constraint(equalTo: view5.bottomAnchor).isActive = true
         label5.widthAnchor.constraint(equalTo: view5.widthAnchor, multiplier: 0.9).isActive = true
         label5.heightAnchor.constraint(equalTo: view5.heightAnchor, multiplier: 0.40).isActive = true
+       
+        button.topAnchor.constraint(equalTo: view5.bottomAnchor).isActive = true
+        button.centerXAnchor.constraint(equalTo: view5.centerXAnchor).isActive = true
+        button.widthAnchor.constraint(equalTo: view5.widthAnchor, multiplier: 0.9).isActive = true
+        button.heightAnchor.constraint(equalTo: view5.heightAnchor, multiplier: 0.40).isActive = true
     }
 
 }
