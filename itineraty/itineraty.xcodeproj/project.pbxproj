@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D76469521229CFE0069D9CB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D76469421229CFE0069D9CB /* Data.swift */; };
 		3DA3657C2122965C00668F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3657B2122965C00668F41 /* AppDelegate.swift */; };
 		3DA365832122965D00668F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DA365822122965D00668F41 /* Assets.xcassets */; };
 		3DA365862122965D00668F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA365842122965D00668F41 /* LaunchScreen.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D76469421229CFE0069D9CB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		3DA365782122965C00668F41 /* itineraty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = itineraty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA3657B2122965C00668F41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DA365822122965D00668F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				3DA3658E21229AB800668F41 /* Trip */,
+				3D76469421229CFE0069D9CB /* Data.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				3DA3659021229ACC00668F41 /* TripModel.swift in Sources */,
 				3DA3659221229ADF00668F41 /* TripFunction.swift in Sources */,
 				3DA3657C2122965C00668F41 /* AppDelegate.swift in Sources */,
+				3D76469521229CFE0069D9CB /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
