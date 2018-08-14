@@ -12,9 +12,21 @@ class TripFunctions {
     
     static func createTrip( tripModel: TripModel ){}
     
-    static func readTrips(){}
+    static func readTrips( completition: @escaping () -> ()){
+        // This is used for add priority in this threat
+        DispatchQueue.global(qos: .userInteractive).async {
+            if Data.tripModels.count == 0 {
+                Data.tripModels.append(TripModel(title: "San Luis Potosí"))
+                Data.tripModels.append(TripModel(title: "Aguascalientes"))
+                Data.tripModels.append(TripModel(title: "Guanajuato"))
+            }
+        }
+        DispatchQueue.main.async {
+            completition()
+        }
+    }
     
     static func updateTrip( tripModel: TripModel ){}
     
-    static deleteTrip(tripModel: )
+    static func deleteTrip(tripModel: TripModel){}
 }
