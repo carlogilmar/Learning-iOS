@@ -10,6 +10,8 @@
 		3DA3657C2122965C00668F41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3657B2122965C00668F41 /* AppDelegate.swift */; };
 		3DA365832122965D00668F41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DA365822122965D00668F41 /* Assets.xcassets */; };
 		3DA365862122965D00668F41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA365842122965D00668F41 /* LaunchScreen.storyboard */; };
+		3DA3659021229ACC00668F41 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3658F21229ACC00668F41 /* TripModel.swift */; };
+		3DA3659221229ADF00668F41 /* TripFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3659121229ADF00668F41 /* TripFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,8 @@
 		3DA365822122965D00668F41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DA365852122965D00668F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DA365872122965D00668F41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DA3658F21229ACC00668F41 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
+		3DA3659121229ADF00668F41 /* TripFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,12 +54,30 @@
 		3DA3657A2122965C00668F41 /* itineraty */ = {
 			isa = PBXGroup;
 			children = (
+				3DA3658D21229AAF00668F41 /* Model */,
 				3DA3657B2122965C00668F41 /* AppDelegate.swift */,
 				3DA365822122965D00668F41 /* Assets.xcassets */,
 				3DA365842122965D00668F41 /* LaunchScreen.storyboard */,
 				3DA365872122965D00668F41 /* Info.plist */,
 			);
 			path = itineraty;
+			sourceTree = "<group>";
+		};
+		3DA3658D21229AAF00668F41 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DA3658E21229AB800668F41 /* Trip */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3DA3658E21229AB800668F41 /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				3DA3658F21229ACC00668F41 /* TripModel.swift */,
+				3DA3659121229ADF00668F41 /* TripFunction.swift */,
+			);
+			path = Trip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +150,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DA3659021229ACC00668F41 /* TripModel.swift in Sources */,
+				3DA3659221229ADF00668F41 /* TripFunction.swift in Sources */,
 				3DA3657C2122965C00668F41 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
