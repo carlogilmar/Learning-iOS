@@ -10,7 +10,12 @@ import UIKit
 
 class TripsViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        TripFunctions.readTrips(completition: { [weak self] in
+            self?.tableView.reloadData()
+        })
     }
 }
