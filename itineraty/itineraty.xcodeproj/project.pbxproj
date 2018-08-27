@@ -16,6 +16,8 @@
 		3DA3659021229ACC00668F41 /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3658F21229ACC00668F41 /* TripModel.swift */; };
 		3DA3659221229ADF00668F41 /* TripFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA3659121229ADF00668F41 /* TripFunction.swift */; };
 		3DC781BF2133CC9B00541ACE /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC781BE2133CC9B00541ACE /* TripsTableViewCell.swift */; };
+		3DC781C22133D80A00541ACE /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC781C12133D80A00541ACE /* UIViewExtension.swift */; };
+		3DC781C42133D92C00541ACE /* TripsViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC781C32133D92C00541ACE /* TripsViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		3DA3658F21229ACC00668F41 /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		3DA3659121229ADF00668F41 /* TripFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFunction.swift; sourceTree = "<group>"; };
 		3DC781BE2133CC9B00541ACE /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		3DC781C12133D80A00541ACE /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		3DC781C32133D92C00541ACE /* TripsViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 				3D7646982122A18A0069D9CB /* TripsViewController.swift */,
 				3D76469A2122A1950069D9CB /* TripsViewController.storyboard */,
 				3DC781BE2133CC9B00541ACE /* TripsTableViewCell.swift */,
+				3DC781C32133D92C00541ACE /* TripsViewExtension.swift */,
 			);
 			path = TripsViewController;
 			sourceTree = "<group>";
@@ -80,6 +85,7 @@
 		3DA3657A2122965C00668F41 /* itineraty */ = {
 			isa = PBXGroup;
 			children = (
+				3DC781C02133D7BC00541ACE /* Extensions */,
 				3D7646962122A1660069D9CB /* Views */,
 				3DA3658D21229AAF00668F41 /* Model */,
 				3DA3657B2122965C00668F41 /* AppDelegate.swift */,
@@ -106,6 +112,14 @@
 				3DA3659121229ADF00668F41 /* TripFunction.swift */,
 			);
 			path = Trip;
+			sourceTree = "<group>";
+		};
+		3DC781C02133D7BC00541ACE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3DC781C12133D80A00541ACE /* UIViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +197,8 @@
 				3DA3659021229ACC00668F41 /* TripModel.swift in Sources */,
 				3DA3659221229ADF00668F41 /* TripFunction.swift in Sources */,
 				3DA3657C2122965C00668F41 /* AppDelegate.swift in Sources */,
+				3DC781C22133D80A00541ACE /* UIViewExtension.swift in Sources */,
+				3DC781C42133D92C00541ACE /* TripsViewExtension.swift in Sources */,
 				3D76469521229CFE0069D9CB /* Data.swift in Sources */,
 				3D7646992122A18A0069D9CB /* TripsViewController.swift in Sources */,
 			);
