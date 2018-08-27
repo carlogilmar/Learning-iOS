@@ -18,10 +18,9 @@ class TripsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         print("I'm preparing a Table View Cell in CocoaTouchClass :D")
-        cardView.layer.shadowOpacity = 1
-        cardView.layer.shadowOffset = CGSize.zero
-        cardView.layer.shadowColor = UIColor.darkGray.cgColor
-        cardView.layer.cornerRadius = 10
+        // This function lives in the UIView Extension
+        cardView.addStyles()
+        cardView.helloWorld()
     }
     
     func setup(tripModel: TripModel){
