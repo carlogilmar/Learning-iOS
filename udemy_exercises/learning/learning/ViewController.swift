@@ -45,20 +45,5 @@ class ViewController: UIViewController {
         print("6.- Did receive memory warning!")
     }
     
-    @IBAction func create(_ sender: UIButton) {
-        print("Creating...")
-    }
-    
-    @IBAction func show(_ sender: UIButton) {
-        print("Show!")
-    }
-    
-    @IBAction func turnOn(_ sender: UIButton) {
-        print("Turn on!!")
-    }
-    
-    @IBAction func speedUp(_ sender: UIButton) {
-        print("Speed up!")
-    }
 }
 
