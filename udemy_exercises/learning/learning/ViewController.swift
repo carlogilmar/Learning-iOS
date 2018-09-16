@@ -29,5 +29,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        self.performSegue(withIdentifier: "goodbyeSegue", sender: indexPath.row)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goodbyeSegue" {
+            let pdfSelected = sender as! Int
+            // Here We create the next controller!
+            let nextController: ViewController2 = segue.destination as! ViewController2
+            nextController.pdfReceived = people[pdfSelected]
+        }
+    }
+    
 }
 

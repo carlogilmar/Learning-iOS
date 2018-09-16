@@ -10,39 +10,13 @@ import UIKit
 
 class ViewController2: UIViewController {
     
+    @IBOutlet weak var message: UILabel!
+    var pdfReceived:String?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func loadView() {
-        super.loadView()
-        print("1.- Loading view")
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        print("2.- View will appear")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        print("3.- View did appear")
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        print("4.- View will disappear")
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        print("5.- View did disappear")
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        print("6.- Did receive memory warning!")
+        message.text = pdfReceived!
     }
     
 }

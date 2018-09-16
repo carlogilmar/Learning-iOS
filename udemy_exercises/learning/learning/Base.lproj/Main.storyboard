@@ -70,6 +70,7 @@
                     <navigationItem key="navigationItem" id="LdK-G8-kva"/>
                     <connections>
                         <outlet property="table" destination="gss-t5-YXL" id="5iP-cq-mf4"/>
+                        <segue destination="HH4-bM-e8g" kind="show" identifier="goodbyeSegue" id="2HB-WH-3HS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,6 +96,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="7NZ-TM-ejs"/>
                     </view>
+                    <connections>
+                        <outlet property="message" destination="cyb-SU-vDK" id="u39-yH-FxX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRd-Y6-4Ad" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
